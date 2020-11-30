@@ -8,7 +8,7 @@ const Counter = () => {
     return (
         <Fragment>
             <h3>My first component {number}</h3>
-            <button onClick={increase}>Increase</button>
+            <button className="btn btn-primary" onClick={increase}>Increase</button>
         </Fragment>
     );
 }
