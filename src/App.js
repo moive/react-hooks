@@ -1,4 +1,5 @@
 import React from 'react';
+import Example1 from './components/Example1';
 // import Counter from './components/Counter';
 // import ListNumber from './components/ListNumber';
 // import Temperature from './components/temperature';
@@ -10,8 +11,9 @@ function App() {
       {/* <h1>Hola mundo..!</h1>
       <Counter></Counter>
       <Temperature />
-      <ListNumber /> */}
-	    <Form />
+      <ListNumber />
+	    <Form /> */}
+      <Example1/>
     </div>
   );
 }
