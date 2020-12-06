@@ -1,21 +1,22 @@
 import React from 'react';
-// import Example1 from './components/Example1';
-// import Counter from './components/Counter';
-// import ListNumber from './components/ListNumber';
-// import Temperature from './components/temperature';
-import Example2 from './components/Example2';
-import Form from './components/Form';
+import Commetary from './components/Commentary';
+import Greeting from './components/gretting';
+
 
 function App() {
+
+  const people = {
+    name:'Daniela',
+    urlImage:'https://via.placeholder.com/64',
+    text:'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+  }
   return (
     <div className="mt-5">
-      <h1>Hola mundo..!</h1>
-      {/* <Counter></Counter>
-      <Temperature />
-      <ListNumber />
-	    <Form />
-      <Example1/> */}
-      <Example2/>
+      <h1>Props in components</h1>
+      <Greeting person = "Moises" age={38} />
+      <Greeting person = "Pedro" age={26} />
+      <Commetary people={people}/>
+      <Commetary people={people}/>
     </div>
   );
 }
