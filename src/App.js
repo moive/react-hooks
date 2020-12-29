@@ -11,6 +11,7 @@ import {
   Link,
   NavLink
 } from "react-router-dom";
+import { About } from './components/About';
 
 
 function App() {
@@ -104,7 +105,7 @@ function App() {
             </div>
           </Route>
           <Route path="/about">
-            <h2>About us</h2>
+            <About/>
           </Route>
           <Route path="/contact">
             <h2>Contact</h2>
