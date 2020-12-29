@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
+import {Link} from 'react-router-dom';
 
 export const About = () => {
     
@@ -8,9 +9,9 @@ export const About = () => {
     }, []);
 
     const getData = async ()=>{
-        const data = await fetch('https://jsonplaceholder.typicode.com/users');
+        const data = await fetch('https://age-of-empires-2-api.herokuapp.com/api/v1/civilizations');
         const users = await data.json();
-        setTeam(users);
+        setTeam(users.civilizations);
     }
 
     return (
@@ -19,7 +20,11 @@ export const About = () => {
             <ul>
                 {
                     team.map(item =>(
-                        <li key={item.id}>{item.name} - <a href={'mailto:' + item.email}>{item.email}</a></li>
+                        <li key={item.id}>
+                            <Link to={`/About/${item.id}`}>
+                                {item.name} - {item.expansion}
+                            </Link>
+                        </li>
                     ))
                 }
             </ul>

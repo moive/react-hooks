@@ -12,6 +12,7 @@ import {
   NavLink
 } from "react-router-dom";
 import { About } from './components/About';
+import { Users } from './components/Users';
 
 
 function App() {
@@ -103,6 +104,9 @@ function App() {
                 />
               </div>
             </div>
+          </Route>
+          <Route path="/about/:id">
+            <Users/>
           </Route>
           <Route path="/about">
             <About/>
