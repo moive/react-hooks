@@ -13,6 +13,10 @@ import {
 } from "react-router-dom";
 import { About } from './components/About';
 import { Users } from './components/Users';
+import { Pokemons } from './components/Pokemons';
+import { Provider } from 'react-redux';
+
+import generateStore from './redux/store';
 
 
 function App() {
@@ -61,6 +65,8 @@ function App() {
     setusers(users.map(user => (user.id === id ? updatedUser : user)));
   }
 
+  const store = generateStore();
+
   return (
     <Router>
       <div className="container">
@@ -68,6 +74,7 @@ function App() {
           <Link to="/" className="btn btn-dark">Home</Link>
           <Link to="/about" className="btn btn-dark">About Us</Link>
           <Link to="/contact" className="btn btn-dark">Contact</Link>
+          <Link to="/pokemons" className="btn btn-dark">Pokemons</Link>
           <NavLink to="/crud" className="btn btn-dark" activeClassName="active">Crud</NavLink>
         </div>
         <Switch>
@@ -113,6 +120,11 @@ function App() {
           </Route>
           <Route path="/contact">
             <h2>Contact</h2>
+          </Route>
+          <Route>
+            <Provider store={store}>
+              <Pokemons/>
+            </Provider>
           </Route>
         </Switch>
       </div>
