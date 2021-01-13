@@ -17,6 +17,7 @@ import { Pokemons } from './components/Pokemons';
 import { Provider } from 'react-redux';
 
 import generateStore from './redux/store';
+import MaterialUi from './components/MaterialUi';
 
 
 function App() {
@@ -75,6 +76,7 @@ function App() {
           <Link to="/about" className="btn btn-dark">About Us</Link>
           <Link to="/contact" className="btn btn-dark">Contact</Link>
           <Link to="/pokemons" className="btn btn-dark">Pokemons</Link>
+          <Link to="/material-ui" className="btn btn-dark">Material ui</Link>
           <NavLink to="/crud" className="btn btn-dark" activeClassName="active">Crud</NavLink>
         </div>
         <Switch>
@@ -121,10 +123,13 @@ function App() {
           <Route path="/contact">
             <h2>Contact</h2>
           </Route>
-          <Route>
+          <Route path="/pokemons">
             <Provider store={store}>
               <Pokemons/>
             </Provider>
+          </Route>
+          <Route path="/material-ui">
+            <MaterialUi/>
           </Route>
         </Switch>
       </div>
