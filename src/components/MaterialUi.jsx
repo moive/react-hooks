@@ -1,5 +1,7 @@
+import React from 'react';
 import { Button, Icon, makeStyles, Typography } from '@material-ui/core';
-import React from 'react'
+import Lists from './Lists';
+import Occult from './Occult';
 
 const useStyle = makeStyles({
     custonBtn:{
@@ -39,6 +41,8 @@ const MaterialUi = () => {
             <Button className={classes.custonBtn}>
                 My customize button
             </Button>
+            <Lists/>
+            <Occult/>
         </div>
     )
 }
