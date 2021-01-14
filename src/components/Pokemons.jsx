@@ -10,9 +10,9 @@ export const Pokemons = () => {
     
     return (
         <div className="mt-4">
-            List of pokemons
-            <button onClick={()=> dispatch(getPokemonsAction())}>Get pokemons</button>
-            <button onClick={()=> dispatch(nextPokemonAction(20))}>next page</button>
+            <div>List of pokemons</div>
+            <button className="btn btn-primary mr-3" onClick={()=> dispatch(getPokemonsAction())}>Get pokemons</button>
+            <button className="btn btn-primary" onClick={()=> dispatch(nextPokemonAction(20))}>next page</button>
             <ul>
                 {
                     pokemons.map(item => (

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import { AppBar, IconButton, makeStyles, Toolbar, Typography, Button } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 
@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
 const NavBar = () => {
     const classes = useStyles();
     return (
-        <div>
+        <Fragment>
             <AppBar position="sticky">
                 <Toolbar>
                     <IconButton color="inherit" className={classes.menuButton}>
@@ -28,7 +28,7 @@ const NavBar = () => {
                 </Toolbar>
             </AppBar>
             <div className={classes.offset}></div>
-        </div>
+        </Fragment>
     )
 }
 
