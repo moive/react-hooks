@@ -29,6 +29,12 @@ const MaterialUi = () => {
                 onClick={()=> ClickMe()}
                 startIcon={<Icon>start</Icon>}
             >Click me!</Button>
+            <Button
+                variant="contained"
+                color="secondary"
+                onClick={()=> ClickMe()}
+                startIcon={<Icon>delete</Icon>}
+            >Click me!</Button>
             <Typography variant="body2" paragraph color="initial">Testing...!</Typography>
             <Button className={classes.custonBtn}>
                 My customize button

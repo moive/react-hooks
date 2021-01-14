@@ -18,6 +18,8 @@ import { Provider } from 'react-redux';
 
 import generateStore from './redux/store';
 import MaterialUi from './components/MaterialUi';
+import { ThemeProvider } from '@material-ui/core';
+import theme from '../src/configTheme';
 
 
 function App() {
@@ -129,7 +131,9 @@ function App() {
             </Provider>
           </Route>
           <Route path="/material-ui">
-            <MaterialUi/>
+            <ThemeProvider theme={theme}>
+              <MaterialUi/>
+            </ThemeProvider>
           </Route>
         </Switch>
       </div>
