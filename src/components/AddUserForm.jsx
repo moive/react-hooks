@@ -13,21 +13,21 @@ const AddUserForm = (props) => {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            <label>Name</label>
-            <input type="text" name="name" ref={
+            <label className="form-label">Name</label>
+            <input className="form-control" type="text" name="name" ref={
                 register({
                     required:{value:true, message:'Field required'}
                 })
             } />
             <div>{errors?.name?.message}</div>
-            <label>Username</label>
-            <input type="text" name="username" ref={
+            <label className="form-label">Username</label>
+            <input className="form-control" type="text" name="username" ref={
                 register({
                     required:{value:true, message:'Field required'}
                 })
             } />
             <div>{errors?.username?.message}</div>
-            <button>Add new user</button>
+            <button className="btn btn-primary mt-3">Add new user</button>
         </form>
     );
 }
