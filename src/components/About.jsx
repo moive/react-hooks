@@ -6,6 +6,9 @@ export const About = () => {
     const [team, setTeam] = useState([]);
     useEffect(() => {
         getData();
+        return ()=> {
+            setTeam({})
+        }
     }, []);
 
     const getData = async ()=>{
