@@ -20,6 +20,7 @@ import generateStore from './redux/store';
 import MaterialUi from './components/MaterialUi';
 import { ThemeProvider } from '@material-ui/core';
 import theme from '../src/configTheme';
+import NavBar from './components/NavBar';
 
 
 function App() {
@@ -132,6 +133,7 @@ function App() {
           </Route>
           <Route path="/material-ui">
             <ThemeProvider theme={theme}>
+              <NavBar/>
               <MaterialUi/>
             </ThemeProvider>
           </Route>
