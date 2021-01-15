@@ -16,7 +16,6 @@ import generateStore from './redux/store';
 import MaterialUi from './components/MaterialUi';
 import { ThemeProvider } from '@material-ui/core';
 import theme from './configTheme';
-import NavBar from './components/NavBar';
 import Crud from './components/Crud';
 import WrapperNavbar from './components/WrapperNavbar';
 
@@ -26,7 +25,7 @@ const App = ()=> {
 	
 	const store = generateStore();
 	return (
-		<div className="container">
+		<div className={location.pathname !== '/navbar' ? 'container' : ''}>
 			{
 				location.pathname !== '/navbar' && 
 				<div className="btn-group mt-5">
@@ -62,7 +61,6 @@ const App = ()=> {
 				</Route>
 				<Route path="/material-ui">
 					<ThemeProvider theme={theme}>
-						<NavBar/>
 						<MaterialUi/>
 					</ThemeProvider>
 				</Route>
