@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { Hidden, makeStyles } from '@material-ui/core'
 import NavBar from './NavBar';
 import DrawerNav from './DrawerNav';
+import BoxContent from './BoxContent';
 
 
 const styles = makeStyles(theme => ({
@@ -41,7 +42,7 @@ const WrapperNavbar = () => {
             </Hidden>
             <div className={classes.content}>
                 <div className={classes.toolbar}></div>
-                <div>testing</div>
+                <BoxContent/>
             </div>
         </div>
     )
